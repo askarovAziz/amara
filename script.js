@@ -1251,6 +1251,37 @@ function initFilters() {
   });
 }
 
+function initGalleryHeroVideoControls() {
+  const video = document.getElementById('galleryHeroVideo');
+  const controlButtons = document.querySelectorAll('.hero-video-btn[data-video-action]');
+
+  if (!video || !controlButtons.length) return;
+
+  controlButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const action = button.dataset.videoAction;
+
+      if (action === 'play') {
+        video.play();
+      }
+
+      if (action === 'pause') {
+        video.pause();
+      }
+
+      if (action === 'stop') {
+        video.pause();
+        video.currentTime = 0;
+      }
+
+      if (action === 'mute') {
+        video.muted = !video.muted;
+        button.textContent = video.muted ? 'Unmute' : 'Mute';
+      }
+    });
+  });
+}
+
 // ============================================
 // INITIALIZATION ON PAGE LOAD
 // ============================================
@@ -1263,6 +1294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initSmoothScroll();
   initFilters();
+  initGalleryHeroVideoControls();
 
   // Page transition animations
   const pageContent = document.querySelector('.page-content');
