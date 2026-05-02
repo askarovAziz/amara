@@ -869,6 +869,8 @@ body[data-theme='light'] .grand-offer-badge {
   --color-border: rgba(212, 165, 116, 0.24);
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3238,6 +3240,8 @@ body[data-theme='light'] .package-amount {
 .page-hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3347,6 +3351,10 @@ body[data-theme='light'] .package-amount {
 }
 
 .hero-video-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  line-height: 1;
   border: 1px solid rgba(255, 255, 255, 0.45);
   background: rgba(12, 12, 12, 0.35);
   color: #fff;
