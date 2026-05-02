@@ -3571,9 +3571,12 @@ body[data-theme='light'] .page-hero-overlay {
 .gallery-video-card video {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
   min-height: 260px;
   object-fit: cover;
+  object-position: center;
+  background: #120c08;
 }
 
 .gallery-video-name {
@@ -5687,6 +5690,7 @@ body[data-theme='light'] .blog-quote-text {
   }
 
   .gallery-video-card video {
+    aspect-ratio: 4 / 5;
     min-height: 220px;
   }
 
